@@ -1,6 +1,6 @@
-'From Cuis7.9 [latest update: #8031] on 28 June 2026 at 11:13:20 am'!
+'From Cuis7.9 [latest update: #8045] on 4 July 2026 at 4:22:09 pm'!
 'Description '!
-!provides: 'DrGeoCore' 1 71!
+!provides: 'DrGeoCore' 1 72!
 !requires: 'UI-Preference' 1 28 nil!
 !requires: 'UI-Panel' 1 140 nil!
 !requires: 'YAXO' 1 28 nil!
@@ -7419,10 +7419,10 @@ toolsMenu: builder
 		icon:	 #saveIcon;
 		help: 'Save this Dr. Geo session.' translated! !
 
-!DrGeo class methodsFor: 'menu' stamp: 'drgeo 28/Jun/2026, 9:13:08 am (UTC)'!
+!DrGeo class methodsFor: 'menu' stamp: 'drgeo 28/Jun/2026, 9:13:51 am (UTC)'!
 version
 	^ 'Installed version: ' translated, 
-		'26.07b beta (code revision ', 
+		'26.07a beta (code revision ', 
 		(String streamContents: [:str | 
 			(CodePackage installedPackages at: 'DrGeo') featureSpec provides printVersionRevisionOn: str]), ')'! !
 
@@ -9146,13 +9146,13 @@ vectorPreferences
 initialize
 	fullscreen := false.! !
 
-!DrGPlatform methodsFor: 'initialize-release' stamp: 'drgeo 24/Feb/2026, 12:42:49 pm (UTC)'!
+!DrGPlatform methodsFor: 'initialize-release' stamp: 'hlsf 4/Jul/2026, 2:21:58 pm (UTC)'!
 launch
 	self setCodeCompletion.
 	self fullscreen: false.
 	Transcript show: '[DrGeo] Code completion set'; cr.
 	"Set a default name for authoring"
-	Utilities setAuthorName: 'Dr. Geo User' initials: 'drgeo'.
+	Utilities setAuthorInitials: 'Dr. Geo User' name: 'drgeo'.
 	Transcript show: '[DrGeo] Author set to "DrGeo User" (drgeo)'; cr.! !
 
 !DrGPlatform methodsFor: 'initialize-release' stamp: 'hlsf 6/Jul/2022, 7:25:01 am (UTC)'!
